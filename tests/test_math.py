@@ -13,7 +13,7 @@ class ModelMathTests(unittest.TestCase):
         self.assertEqual(smooth_rate(0,100),0)
         self.assertTrue(smooth_rate(6,50) > 0)
         self.assertTrue(smooth_rate(-6,50) < 0)
-        self.assertGreater(smooth_rate(10,1000),smooth_rate(10,100))
+        self.assertGreater(smooth_rate(100,1000),smooth_rate(10,100))
     def test_weights(self):
         self.assertEqual(WICKET_RUN_VALUE,6.0)
         self.assertGreater(TIME_WEIGHT[2026],TIME_WEIGHT[2025])
