@@ -1,0 +1,92 @@
+{
+  "thresholds": {
+    "0.68": {
+      "bat": [
+        "Shreyas Iyer",
+        "Naman Dhir",
+        "Shashank Singh",
+        "Daryl Mitchell",
+        "Tilak Varma",
+        "Tim David",
+        "Jitesh Sharma",
+        "Virat Kohli",
+        "Rovman Powell",
+        "Marcus Stoinis"
+      ],
+      "bowl": [
+        "Sunil Narine",
+        "Jasprit Bumrah",
+        "Rasikh Salam",
+        "Jamie Overton",
+        "Lungi Ngidi",
+        "Jason Holder",
+        "Mitchell Starc",
+        "Cameron Green",
+        "Matheesha Pathirana",
+        "Krunal Pandya"
+      ]
+    },
+    "0.73": {
+      "bat": [
+        "Naman Dhir",
+        "Shreyas Iyer",
+        "Tilak Varma",
+        "Shashank Singh",
+        "Daryl Mitchell",
+        "Tim David",
+        "Jos Buttler",
+        "Virat Kohli",
+        "Jitesh Sharma",
+        "Marcus Stoinis"
+      ],
+      "bowl": [
+        "Jasprit Bumrah",
+        "Sunil Narine",
+        "Rasikh Salam",
+        "Mitchell Starc",
+        "Matheesha Pathirana",
+        "Akeal Hosein",
+        "Cameron Green",
+        "Spencer Johnson",
+        "Wanindu Hasaranga",
+        "Ravindra Jadeja"
+      ]
+    },
+    "0.78": {
+      "bat": [
+        "Tilak Varma",
+        "Shreyas Iyer",
+        "Naman Dhir",
+        "Shashank Singh",
+        "Heinrich Klaasen",
+        "Jos Buttler",
+        "Jitesh Sharma",
+        "Donovan Ferreira",
+        "Sameer Rizvi",
+        "Tristan Stubbs"
+      ],
+      "bowl": [
+        "Sunil Narine",
+        "Jasprit Bumrah",
+        "Rasikh Salam",
+        "Cameron Green",
+        "Mitchell Starc",
+        "Matheesha Pathirana",
+        "Ravindra Jadeja",
+        "Varun Chakravarthy",
+        "Wanindu Hasaranga",
+        "Akeal Hosein"
+      ]
+    }
+  },
+  "top10_overlap": {
+    "0.68": {
+      "bat": 9,
+      "bowl": 6
+    },
+    "0.78": {
+      "bat": 6,
+      "bowl": 9
+    }
+  }
+}
