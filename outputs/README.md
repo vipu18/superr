@@ -1,0 +1,1 @@
+Run python advanced_pressure_rank.py && python check_sensitivity.py && python aggregate_robust_rank.py. Final output files: bat_final_consensus.csv and bowl_final_consensus.csv. The consensus index is a relative percentile index, not a probability.
