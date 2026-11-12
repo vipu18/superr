@@ -1,0 +1,11 @@
+stable_rank,player,rank_q68,rank_q73,rank_q78,worst_case_rank,top10_cutoffs,positive_pressure_matches_pct,pressure_balls_q73,pressure_matches,consensus_index,score_q73,pressure_index,resilience_index,fitness_status,future_ipl_availability
+1,Shreyas Iyer,1,2,2,2,3,62.5,238,21,98.77,25.62,37.41,22.3,unverified,unverified
+2,Naman Dhir,2,1,3,3,3,79.07,199,17,98.76,26.66,36.9,35.64,unverified,unverified
+3,Shashank Singh,3,4,4,4,3,63.2,245,20,95.58,23.0,31.72,26.64,unverified,unverified
+4,Tilak Varma,5,3,1,5,3,60.6,437,36,96.96,25.46,35.13,31.5,unverified,unverified
+5,Jitesh Sharma,7,9,7,9,3,71.57,209,22,88.85,15.88,18.96,35.42,unverified,unverified
+6,Tim David,6,6,11,11,2,59.7,295,28,89.83,18.37,28.23,-2.87,unverified,unverified
+7,Jos Buttler,12,7,6,12,2,79.57,187,15,89.06,17.05,22.97,10.37,unverified,unverified
+8,Tristan Stubbs,13,12,10,13,1,49.53,432,32,82.97,11.92,16.57,13.92,unverified,unverified
+9,Heinrich Klaasen,16,19,5,19,1,62.6,339,25,78.53,8.0,14.17,-1.92,unverified,unverified
+10,Washington Sundar,20,11,16,20,0,58.13,205,18,78.6,11.93,15.81,24.23,unverified,unverified
