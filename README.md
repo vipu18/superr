@@ -23,5 +23,20 @@ Do not commit the supplied licensed CSV dataset. Keep the four provided files in
 
 The complete reproducible script package and CSV diagnostics are supplied as a companion download in the user's ChatGPT session. GitHub files are being populated independently of the licensed data.
 
+
+## Run the analysis
+
+Install Python 3.10 or newer. Place the four licensed CSV files in `data/`; keep that folder private.
+
+```bash
+python -m pip install -r requirements.txt
+python advanced_pressure_rank.py
+python check_sensitivity.py
+python aggregate_robust_rank.py
+python -m unittest discover -s tests -v
+```
+
+The reproducible rankings are saved to `outputs/bat_final_consensus.csv` and `outputs/bowl_final_consensus.csv`. The repository also contains a compact `outputs/top10_consensus_summary.csv` for quick review.
+
 ## Limitations
 Pressure weights are research choices rather than trained parameters. Threshold changes can materially change some mid-table ranks, and retrospective peer baselines are not prospective cross-validation. There is no bonus for RR home games in this official-challenge version.
