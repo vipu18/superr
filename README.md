@@ -1,12 +1,12 @@
-# SupeRR Selector — Pressure Performance Analysis
+# SupeRR Selector Pressure Performance Analysis
 
 A Python-based analysis of **which batters and bowlers perform most reliably under pressure** in IPL and men's T20 International cricket.
 
-The project was developed for **SupeRR Selector Season 2 — Round 1**. Instead of choosing players based on reputation, total runs, or wickets alone, it evaluates **how difficult each match situation was** and **how well the player performed compared with expectations**.
+The project was developed for **SupeRR Selector Season 2 Round 1**. Instead of choosing players based on reputation, total runs, or wickets alone, it evaluates **how difficult each match situation was** and **how well the player performed compared with expectations**.
 
 > **Analysis period:** 1 January 2024 to 12 November 2026  
 > **Data:** Provided IPL and men's T20I ball-by-ball, match, competition, and player-mapping CSVs  
-> **Goal:** Two overall top-10 rankings — batters and bowlers
+> **Goal:** Two overall top-10 rankings batters and bowlers
 
 ## Latest recommended rankings
 
@@ -44,17 +44,17 @@ The last category represents **inferred tactics from the scoreboard**, not a cla
 
 ## How the ranking works
 
-### Step 1 — Prepare the data
+### Step 1 Prepare the data
 
 Python and Pandas join the provided CSVs, filter the analysis dates and eligible IPL/T20I matches, clean delivery records, and separate batting from bowling events. Incomplete and revised-target matches that the model cannot evaluate consistently are excluded.
 
-### Step 2 — Measure pressure before the ball
+### Step 2 Measure pressure before the ball
 
 For each delivery, the script estimates the difficulty of the situation using the six categories above. It distinguishes pressure on the **batter** from pressure on the **bowler**.
 
 Pressure thresholds at the **68th, 73rd and 78th percentiles** are tested so the rankings do not depend on one definition of a high-pressure delivery.
 
-### Step 3 — Measure what the player actually did
+### Step 3 Measure what the player actually did
 
 A player's result is compared with expected performance in similar situations, taking into account format, innings, over phase, bowling style, pressure level and venue.
 
@@ -65,7 +65,7 @@ Simplified per-ball calculations:
 
 The **6-run wicket value is a model assumption**, not an official cricket statistic. Expected outcomes are estimated retrospectively from the dataset.
 
-### Step 4 — Reward reliable performance
+### Step 4 Reward reliable performance
 
 The final **recommended** score uses:
 
@@ -79,7 +79,7 @@ Small samples are shrunk toward neutral estimates. Match consistency uses a cons
 
 The underlying comprehensive benchmark also produces a richer seven-component diagnostic score; see [Factor Audit](FACTOR_AUDIT.md) and [Detailed Methodology](HACKATHON_RECOMMENDATION.md). The table above shows the **recommended final selection method**, not that separate diagnostic formula.
 
-### Step 5 — Check eligibility and robustness
+### Step 5 Check eligibility and robustness
 
 For the final recommended shortlist, players must appear at all three pressure cutoffs, have at least **12 qualifying pressure matches**, and at the central cutoff have at least **135 high-pressure batting balls** or **150 high-pressure bowling balls**. The upstream model also applies IPL participation minimums.
 
@@ -127,12 +127,12 @@ python -m unittest discover -s tests
 
 **Output files:**
 
-- `outputs/bat_hackathon_recommended_top10.csv` — final top 10 batters
-- `outputs/bowl_hackathon_recommended_top10.csv` — final top 10 bowlers
-- `outputs/bat_hackathon_recommended_full.csv` — all qualifying batters
-- `outputs/bowl_hackathon_recommended_full.csv` — all qualifying bowlers
-- `outputs/hackathon_recommendation_validation.json` — alternative-weight stability checks
-- `outputs/comprehensive_sensitivity.json` — three pressure thresholds
+- `outputs/bat_hackathon_recommended_top10.csv` final top 10 batters
+- `outputs/bowl_hackathon_recommended_top10.csv` final top 10 bowlers
+- `outputs/bat_hackathon_recommended_full.csv` all qualifying batters
+- `outputs/bowl_hackathon_recommended_full.csv`all qualifying bowlers
+- `outputs/hackathon_recommendation_validation.json`alternative-weight stability checks
+- `outputs/comprehensive_sensitivity.json` three pressure thresholds
 
 The complete analysis can take longer than running the final ranking script alone. **Run the scripts in the listed order:** the final script needs the intermediate `q68`, `q73`, and `q78` ranking files produced by the sensitivity script.
 
