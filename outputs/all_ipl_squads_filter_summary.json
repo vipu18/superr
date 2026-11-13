@@ -1,0 +1,8 @@
+{
+  "snapshot": "2026-11-13",
+  "retention_deadline": "2026-11-17",
+  "squad_filter": "all 10 IPL teams",
+  "bat": {"original": 37, "current_squad_excluded": 36, "ipl_retired_excluded": 1, "uncontracted_remaining": 0},
+  "bowl": {"original": 61, "current_squad_excluded": 56, "ipl_retired_excluded": 1, "uncontracted_remaining": 4},
+  "note": "2027 retentions are not final. Scores are unchanged from the previous pressure benchmark."
+}
