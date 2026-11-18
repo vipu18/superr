@@ -72,7 +72,7 @@ def score_role(deliveries, role, india_matches):
 
 def shortlist(scores, pool, excluded):
     scored = pool.merge(scores, on='player_id', how='left', validate='one_to_one')
-    eligible = scored[scored.score.notna() & ~scored.player_id.isin(excluded)
+    eligible = scored[scored.score.notna() & scored.released_by.ne('RR') & ~scored.player_id.isin(excluded)
                       & scored.availability.isin(['release only', 'registration reported', 'confirmed'])]
     return eligible.sort_values(['evidence_tier', 'score', 'pressure_balls', 'player_id'],
                                 ascending=[True, False, False, True])

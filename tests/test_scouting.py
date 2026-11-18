@@ -15,8 +15,8 @@ class ScoutingTests(unittest.TestCase):
         self.assertEqual(rr_bonus(frame.assign(weighted=100)), 3)
 
     def test_availability_and_tier_precedence(self):
-        pool = pd.DataFrame({'player_id': range(5), 'availability':
+        pool = pd.DataFrame({'player_id': range(5), 'released_by': ['MI','DC','GT','KKR','RR'], 'availability':
                              ['release only', 'withdrawn', 'confirmed', 'retired', 'confirmed']})
         scores = pd.DataFrame({'player_id': range(5), 'score': [2., 5., 4., 6., 3.],
                                'evidence_tier': [1, 1, 2, 1, 1], 'pressure_balls': [90] * 5})
-        self.assertEqual(shortlist(scores, pool, {4}).player_id.tolist(), [0, 2])
+        self.assertEqual(shortlist(scores, pool, set()).player_id.tolist(), [0, 2])
