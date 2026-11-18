@@ -8,7 +8,34 @@ The project was developed for **SupeRR Selector Season 2 Round 1**. Instead of c
 > **Data:** Provided IPL and men's T20I ball-by-ball, match, competition, and player-mapping CSVs  
 > **Goal:** Two overall top-10 rankings batters and bowlers
 
-## Latest recommended rankings
+## IPL 2027 Rajasthan Royals scouting shortlist
+
+Updated 18 November 2026. The scouting model uses **114,946 deliveries from 484 eligible IPL and men's T20I matches**, spanning 11 January 2024 to 1 November 2026. The final selection uses the supplied releases from the other nine franchises. It excludes all nine Rajasthan releases, retained and traded-in players, Pakistan representatives, retirees and known withdrawals. Release alone leaves full-season availability provisional.
+
+| Rank | Batter | Score | Bowler | Score |
+|---:|---|---:|---|---:|
+| 1 | Shahrukh Khan | 1.06 | Matheesha Pathirana | 13.47 |
+| 2 | Abishek Porel | -4.29 | Jaydev Unadkat | 8.66 |
+| 3 | Kamindu Mendis | -7.34 | Wanindu Hasaranga | 6.33 |
+| 4 | Nehal Wadhera | -9.07 | Trent Boult | 5.52 |
+| 5 | Pathum Nissanka | 3.33 | Spencer Johnson | 5.39 |
+| 6 | Rachin Ravindra | -3.90 | Mustafizur Rahman | 4.82 |
+| 7 | Matt Short | -5.25 | Blessing Muzarabani | 1.91 |
+| 8 | Nitish Rana | -11.77 | Zak Foulkes | 0.49 |
+| 9 | Rahul Tripathi | -14.50 | Lockie Ferguson | 0.46 |
+| 10 | Wanindu Hasaranga | -22.83 | Avesh Khan | -0.84 |
+
+Players rank by evidence tier first and score second within each role. Four batters met the stronger sample requirements. The remaining six qualified in the smaller-sample tier, which is why Pathum Nissanka ranks fifth despite his higher score. All ten selected bowlers met the stronger requirements.
+
+The rating combines historical pressure performance (55%), IPL pressure performance (15%), recent IPL form (15%), pressure performance in India (10%) and recent T20I form (5%). Positive pressure impact at Jaipur and Guwahati can earn up to three additional points, with smaller bonuses for sparse evidence. Trent Boult moves from fifth to fourth after the venue adjustment.
+
+**How stable are the picks?** Matheesha Pathirana led at all three pressure cutoffs, and nine or ten of the selected bowlers stayed in the top ten at each cutoff across 24 qualifying candidates. Shahrukh Khan also led at all three cutoffs, but exactly 10 batters qualified. His adjusted impact was similar under pressure and in ordinary situations. These checks measure historical stability within the dataset.
+
+To reproduce the shortlist, place the four input CSVs listed below in `data/` and run `python rank_scouting.py`. Run `python -m unittest discover -s tests` to check model behaviour. The batting and bowling CSVs include evidence tiers, rank before the venue bonus, pressure sample sizes at each RR ground and availability status.
+
+[Scouting methodology](SCOUTING_2027.md) · [Batting rankings](outputs/bat_scouting_2027.csv) · [Bowling rankings](outputs/bowl_scouting_2027.csv) · [Dated player pool](scouting_pool_2027.csv)
+
+## Overall Round 1 benchmark rankings
 
 These are the results from `hackathon_recommended_rank.py`, using pressure-adjusted performance, improvement over normal form, match-by-match reliability, and sample-size safeguards.
 
@@ -165,7 +192,3 @@ Do not interpret small differences in ranking scores as conclusive proof that on
 The supplied ball-by-ball and supporting datasets are **not redistributed** here. Add them locally only if your rights to the data permit it.
 
 This repository is intended as a transparent, reproducible approach to the **overall question: who performs most consistently under pressure?**
-
-## IPL 2027 Rajasthan scouting rankings
-
-Run `python rank_scouting.py` after placing the four supplied CSVs in `data/`. See the [method and availability snapshot](SCOUTING_2027.md), [batting rankings](outputs/bat_scouting_2027.csv) and [bowling rankings](outputs/bowl_scouting_2027.csv). Each row includes the rank before the Rajasthan venue bonus.
