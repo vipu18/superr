@@ -165,3 +165,7 @@ Do not interpret small differences in ranking scores as conclusive proof that on
 The supplied ball-by-ball and supporting datasets are **not redistributed** here. Add them locally only if your rights to the data permit it.
 
 This repository is intended as a transparent, reproducible approach to the **overall question: who performs most consistently under pressure?**
+
+## IPL 2027 Rajasthan scouting rankings
+
+Run `python rank_scouting.py` after placing the four supplied CSVs in `data/`. See the [method and availability snapshot](SCOUTING_2027.md), [batting rankings](outputs/bat_scouting_2027.csv) and [bowling rankings](outputs/bowl_scouting_2027.csv). Each row includes the rank before the Rajasthan venue bonus.
