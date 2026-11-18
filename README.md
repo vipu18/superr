@@ -35,25 +35,6 @@ To reproduce the shortlist, place the four input CSVs listed below in `data/` an
 
 [Scouting methodology](SCOUTING_2027.md) · [Batting rankings](outputs/bat_scouting_2027.csv) · [Bowling rankings](outputs/bowl_scouting_2027.csv) · [Dated player pool](scouting_pool_2027.csv)
 
-## Overall Round 1 benchmark rankings
-
-These are the results from `hackathon_recommended_rank.py`, using pressure-adjusted performance, improvement over normal form, match-by-match reliability, and sample-size safeguards.
-
-| Rank | Batter | Score | Bowler | Score |
-| ---: | --- | ---: | --- | ---: |
-| 1 | **Naman Dhir** | 28.09 | **Sunil Narine** | 22.60 |
-| 2 | Shreyas Iyer | 27.54 | Jasprit Bumrah | 21.57 |
-| 3 | Tilak Varma | 26.60 | Rasikh Salam | 19.84 |
-| 4 | Shashank Singh | 24.65 | Mitchell Starc | 18.54 |
-| 5 | Jitesh Sharma | 18.64 | Matheesha Pathirana | 13.66 |
-| 6 | Jos Buttler | 13.88 | Wanindu Hasaranga | 12.27 |
-| 7 | Donovan Ferreira | 13.46 | Jason Holder | 11.98 |
-| 8 | Tim David | 13.44 | Lungi Ngidi | 11.30 |
-| 9 | Tristan Stubbs | 12.42 | Jamie Overton | 8.98 |
-| 10 | Marcus Stoinis | 12.27 | Varun Chakravarthy | 8.91 |
-
-**Scores are relative statistical indices, not winning probabilities.** Batting and bowling scores are calculated separately and should not be compared directly.
-
 ## What counts as pressure?
 
 The system calculates pressure **before each delivery**, using only the match state and previously observed information available for the pressure features. Batters and bowlers receive separate pressure assessments.
